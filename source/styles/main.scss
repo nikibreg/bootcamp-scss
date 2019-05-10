@@ -1,5 +1,57 @@
-$color-1: blue;
+$color-1: #21c2f8;;
+$color-2: #fff;
+$color-3:#222533;
 
-h1 {
-    color: $color-1;
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+$font-1: 'Lato', sans-serif;
+
+.row {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    align-items: flex-end;
+
+    .btn {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.btn {
+    background-color: $color-1;
+    color: $color-2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-1;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 12px 37px;
+    border: none;
+
+    &:hover {
+        background: $color-3;
+    }
+
+    &.medium {
+        font-size: 18px;
+        padding: 14px 47px;
+    }
+
+    &.large {
+        font-size: 26px;
+        padding: 24px 94px;
+    }
+
+    &.x-large {
+        font-size: 36px;
+        padding: 26px 102px;
+    }
 }
