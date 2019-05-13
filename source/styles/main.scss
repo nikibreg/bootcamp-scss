@@ -2,6 +2,7 @@
 @import 'base';
 @import 'palette';
 @import 'components/btn/index';
+
 body {
     border: none;
     -moz-osx-font-smoothing: grayscale;
@@ -12,7 +13,6 @@ body {
 $font-1: 'Lato', sans-serif;
 
 .btn {
-    padding: 12px 37px;
     border: none;
     background-color: $color-1;
     color: $color-2;
@@ -21,6 +21,8 @@ $font-1: 'Lato', sans-serif;
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
+
+    @include size(36px, 27px, 100px, 27px, 102px);
 
     &.medium {
         padding: 14px 47px;
