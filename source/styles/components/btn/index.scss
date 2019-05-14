@@ -1,1 +1,53 @@
 @import '_size';
+@import 'size';
+
+.btn {
+    border: none;
+    background-color: color(1);
+    color: color(2);
+    font-family: 'Lato', sans-serif;
+
+    @include size(14px,11px,37px,10.8px,37.1px);
+
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.medium {
+        @include size(18px,14px,46px,14px,46px);
+    }
+
+    &.large {
+        @include size(26px,23px,93px,23px,94px);
+    }
+
+    &.x-large {
+        @include size(36px,27px,102px,27px,103px);
+    }
+
+    &.round {
+
+        $rounds: (3, 7, 12, 20);
+
+        @each $round in $rounds {
+
+            &-#{$round} {
+                border-radius: $round + px;
+            }
+        }
+    }
+
+    &.bg-color {
+        @each $index,$color in $palette {
+
+            &-#{$index} {
+                background-color: $color;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: color(3);
+    }
+}
